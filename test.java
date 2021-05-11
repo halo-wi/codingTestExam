@@ -1,5 +1,3 @@
-package aa;
-
 import java.io.*;
 
 public class Main {
@@ -13,19 +11,13 @@ public class Main {
 			int k = Integer.parseInt(arr[1])-Integer.parseInt(arr[0]);
 			int a = (int) Math.floor(Math.sqrt(k-1));
 			int b = 1;
-			int c = a*a+((a+1)*(a+1)-a*a)/2;
+			int c = a*a+a;
 			if(a!=0) {
-			if(a%2==0) {
-				if(c<k) b=2*a;
+				if(k<=c) b=2*a;
 				else b=2*a+1;
 				}
-			if(a%2!=0) {
-				if(c<k) b=2*a+1;
-				else b=2*a;
-				}
-			}
 			bw.write(b+"\n");
+			bw.flush();
 		}
-		bw.flush();
 	}
 }
